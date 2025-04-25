@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 import aiohttp
 import json
 from bs4 import BeautifulSoup
+import threading
+from flask import Flask, render_template
 
 # Loading environment variables
 load_dotenv()
@@ -15,6 +17,9 @@ load_dotenv()
 # Configuring intents
 intents = discord.Intents.all() 
 bot = commands.Bot(command_prefix='!', intents=intents)
+
+# Flask app configuration
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 # Verifying environment variables
 try:
@@ -37,6 +42,11 @@ CHALLENGE_SOURCES = [
     "hackerrank",
     "projecteuler"
 ]
+
+# Flask routes
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @bot.event
 async def on_ready():
@@ -433,11 +443,26 @@ async def test(ctx):
     except Exception as e:
         print(f"Test command error: {e}")
 
-if __name__ == '__main__':
-    print("Starting bot...")
+def run_bot():
+    """Function to run the Discord bot"""
     try:
         bot.run(TOKEN)
     except discord.errors.LoginFailure:
         print("Invalid bot token. Please check your .env file")
     except Exception as e:
         print(f"Unexpected error: {e}")
+
+def run_flask():
+    """Function to run the Flask app"""
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+if __name__ == '__main__':
+    print("Starting services...")
+    
+    # Start Discord bot in a separate thread
+    bot_thread = threading.Thread(target=run_bot)
+    bot_thread.daemon = True
+    bot_thread.start()
+    
+    # Run Flask app in the main thread
+    run_flask()
