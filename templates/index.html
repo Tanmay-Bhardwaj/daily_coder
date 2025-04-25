@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Coder - Professional Coding Challenges Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='daily_coder_logo.png') }}" alt="Daily Coder Logo" class="logo">
+                <div class="logo-text">
+                    <h1>DAILY<span>CODER</span></h1>
+                    <p>PROFESSIONAL CODING CHALLENGES BOT</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#commands">COMMANDS</a></li>
+                    <li><a href="#integration">INTEGRATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="hero-content">
+                    <h2>ENHANCE YOUR CODING PRACTICE</h2>
+                    <p>Daily curated challenges from top competitive programming platforms delivered directly to your Discord server</p>
+                    <a href="#integration" class="cta-button">GET STARTED</a>
+                </div>
+            </section>
+
+            <section id="features" class="features-section">
+                <div class="section-header">
+                    <h2>BOT FEATURES</h2>
+                    <p>What makes Daily Coder essential for developer discord servers</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Daily Challenges</h3>
+                        <p>Fresh coding problems delivered daily at 6:30 PM IST</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Multiple Sources</h3>
+                        <p>LeetCode, CodeChef, HackerRank, and Project Euler</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Saves time</h3>
+                        <p>No need to search for coding problems, we will do that for you</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Solving</h3>
+                        <p>Multiple people can solve the same problem at the same time and even collaborate, making it more fun and engaging</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="commands" class="commands-section">
+                <div class="section-header">
+                    <h2>BOT COMMANDS</h2>
+                    <p>Interact with Daily Coder using these commands</p>
+                </div>
+                <div class="commands-grid">
+                    <div class="command-card">
+                        <code>!challenge</code>
+                        <p>Get a random coding challenge</p>
+                    </div>
+                    <div class="command-card">
+                        <code>!challenge &lt;source&gt;</code>
+                        <p>Specify platform for challenge</p>
+                    </div>
+                    <div class="command-card">
+                        <code>!source</code>
+                        <p>View the source of the challenge available on the platform</p>
+                    </div>
+                    <div class="command-card">
+                        <code>!test</code>
+                        <p>check if the bot is working</p>
+                    </div>
+                    <div class="command-card">
+                        <code>!help</code>
+                        <p>Get assistance with commands</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="integration" class="integration-section">
+                <div class="integration-content">
+                    <h2>INTEGRATE WITH YOUR SERVER</h2>
+                    <p>Add Daily Coder to your Discord community with one click</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1364236599910469704&permissions=2048&integration_type=0&scope=bot" class="cta-button">ADD TO DISCORD</a>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>DAILY<span>CODER</span></h3>
+                    <p>Professional Coding Challenges Bot</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#commands">Commands</a>
+                        <a href="#integration">Integration</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="https://discord.gg/3EG2sjNwNA", target="_blank">Code Connect</a>
+                        <a href="https://www.linkedin.com/in/tanmay-bhardwaj-448481334/", target="_blank">Contact developer</a>
+                        <a href="https://github.com/Tanmay-Bhardwaj/daily_coder", target="_blank">GitHub</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="https://tanmaybhardwaj.in/", target="_blank">Owner</a>
+                        <a href="https://github.com/Tanmay-Bhardwaj", target="_blank">Other Projects</a>
+                        <a href="https://www.instagram.com/tanmaybhardwaj__?igsh=MXM0c2F1bHB4MGZoYQ==", target="_blank">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="910417834209865790"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.instagram.com/tanmaybhardwaj__?igsh=MXM0c2F1bHB4MGZoYQ==", target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Tanmay-Bhardwaj/daily_coder", target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/tanmay-bhardwaj-448481334/", target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Daily Coder. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
